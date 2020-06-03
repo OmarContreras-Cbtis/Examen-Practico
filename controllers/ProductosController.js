@@ -21,4 +21,4 @@ productosController.list = (re, res)=>{
     })
 };
 
-module.exports = pintoresController;
+module.exports = productosController;

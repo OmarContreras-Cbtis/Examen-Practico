@@ -23,3 +23,5 @@ let ProductosSchema = new Schema({
         required: [true, 'necesitamos el codigo AX']
     }
 });
+
+module.exports = mongoose.model('Productos', ProductosSchema);

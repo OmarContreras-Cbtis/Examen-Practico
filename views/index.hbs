@@ -1,2 +1,16 @@
 {{>header}}
-hola
+<div class="container">
+    {{#if Catatalogo}}
+    <table>
+        <thead>
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{album}}</td>
+                <td>{{precio}}</td>
+            </tr>
+        </thead>
+    </table>
+    {{else}}
+    <div>No se encuentan productos</div>
+    {{/if}}
+</div>

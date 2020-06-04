@@ -4,18 +4,18 @@ const mongoose = require('mongoose');
 
 const PUERTO = process.env.PORT || 3000;
 
-let productosRouter = require('./routes/producto')
+let pintoresRouter = require('./routes/pintor')
 
 const app = express();
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 app.use(express.static(__dirname + '/public'));
 
-app.use('/', productosRouter);
+app.use('/', pintoresRouter);
 
 mongoose.Promise = global.Promise;
-const cadena = 'mongodb+srv://Thanos:RosaPuta@equipo-12-aiizn.mongodb.net/TiendaPanini?retryWrites=true&w=majority'
-mongoose.connect(cadena,{useNewUrlParser: true, useUnifiedTopology: true})
+const cadena = 'mongodb+srv://Omar-Contreras:Omar151003@contrerasarroyoomar4g-qfay4.mongodb.net/Examen?retryWrites=true&w=majority'
+mongoose.connect(cadena, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{
     console.log('conexion establecida')
 })
